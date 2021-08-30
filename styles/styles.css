@@ -238,6 +238,7 @@ p {
 
   .card_purple {
     transform: scaleY(1.2);
+    transition: all 0.3s;
   }
 
   .plan {
