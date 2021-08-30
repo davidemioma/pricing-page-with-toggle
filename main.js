@@ -8,9 +8,9 @@ let masterPlan = document.querySelector(".master .amount");
 let removeMonthly = document.querySelector(".monthly .circle");
 let removeyearly = document.querySelector(".yearly .circle");
 
-let planA = 19.99;
-let planB = 24.99;
-let planC = 39.99;
+let planA = 199.99;
+let planB = 249.99;
+let planC = 399.99;
 
 function init() {
   basicPlan.textContent = planA;
@@ -24,9 +24,9 @@ turnSwitchMonthly.addEventListener("click", function () {
   //   turnSwitch.classList.toggle("active");
   removeMonthly.classList.remove("hidden");
   removeyearly.classList.add("hidden");
-  basicPlan.textContent = Math.round(planA / 3);
-  profPlan.textContent = Math.round(planB / 3);
-  masterPlan.textContent = Math.round(planC / 3);
+  basicPlan.textContent = 19.99;
+  profPlan.textContent = 24.99;
+  masterPlan.textContent = 39.99;
 });
 
 turnSwitchYearly.addEventListener("click", function () {
