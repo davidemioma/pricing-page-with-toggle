@@ -1,0 +1,246 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat";
+  background-color: hsl(240, 78%, 98%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.top,
+.bottom {
+  position: absolute;
+  z-index: -1;
+}
+
+.top {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -10%);
+}
+
+.bottom {
+  display: none;
+  bottom: 0;
+  left: 0;
+}
+
+.container {
+  padding: 5rem 0;
+  width: 90%;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0;
+    width: 80%;
+  }
+
+  body {
+    height: 100vh;
+  }
+
+  .top {
+    transform: translate(0, -10%);
+  }
+
+  .bottom {
+    display: block;
+  }
+}
+
+.heading {
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.plan {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.plan p {
+  color: hsl(234, 14%, 74%);
+}
+
+.switch {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  padding: 0 0.3rem;
+}
+
+.switch.active {
+  opacity: 0.6;
+}
+
+.yearly,
+.monthly {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.circle {
+  width: 90%;
+  height: 25px;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  padding: 5rem 3rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 4rem;
+}
+
+.card_white {
+  background: #fff;
+}
+
+.card_purple {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.sign {
+  font-size: 3rem;
+}
+
+.amount {
+  font-size: 6rem;
+}
+
+.period {
+  font-size: 3rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  padding: 2rem 0;
+  font-size: 1.8rem;
+}
+
+.card_white .list li {
+  border-bottom: 0.5px solid hsl(234, 14%, 74%);
+}
+
+.card_white .b_btm {
+  border-top: 0.5px solid hsl(234, 14%, 74%);
+}
+
+.card_purple .list li {
+  border-bottom: 0.5px solid #fff;
+}
+
+.card_purple .b_btm {
+  border-top: 0.5px solid #fff;
+}
+
+.card_btn {
+  margin-top: 4rem;
+  width: 100%;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 2rem 0;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn_gradient {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+}
+
+.btn_gradient:hover {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(234, 14%, 74%);
+}
+
+.btn_white {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+.btn_white:hover {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.card_grid {
+  display: grid;
+  gap: 3rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .card_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card_purple {
+    transform: scaleY(1.2);
+  }
+
+  .plan {
+    margin-bottom: 15rem;
+  }
+}
